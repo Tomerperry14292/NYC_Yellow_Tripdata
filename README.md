@@ -25,6 +25,7 @@ airflow webserver --port 8080
   c)yellow_tripdata_2023-02.parquet (download from tags area - tag v1.0.0)
   
   d)yellow_tripdata_2023-03.parquet (download from tags area - tag v1.0.0)
+  
   tag area link - https://github.com/Tomerperry14292/NYC_Yellow_Tripdata/releases/tag/v1.0.0
   
 9) Run the Airflow DAG name "yellow_taxi_trip_data" and feel free to look at the logs of the python opertor name "fetch_trip_data" and see the results.  
