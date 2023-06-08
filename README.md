@@ -19,8 +19,11 @@ airflow webserver --port 8080
 8) Create a new folder name "dags" under the airflow folder in your computer - insert into this folder my project files:
 
   a)test_dag.py
+  
   b)yellow_tripdata_2023-01.parquet 
+  
   c)yellow_tripdata_2023-02.parquet
+  
   d)yellow_tripdata_2023-03.parquet
   
 9) Run the Airflow DAG name "yellow_taxi_trip_data" and feel free to look at the logs of the python opertor name "fetch_trip_data" and see the results.  
