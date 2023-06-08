@@ -16,14 +16,15 @@ airflow webserver --port 8080
 5) Start the Airflow scheduler using the following command: airflow scheduler
 6) In Chrome put the next URL - http://localhost:8080/
 7) Put the username and password that you used in the admin user command (in our case - username: admin, password: 1234)
-8) Create a new folder name "dags" under the airflow folder in your computer - insert into this folder my project files:
+8) Create a new folder name "dags" under the airflow folder in your computer - insert into this folder my project files (the parquet files has to be as the same "height" as the python file:
 
   a)test_dag.py (download the file from the "code" section)
   
-  b)yellow_tripdata_2023-01.parquet (
+  b)yellow_tripdata_2023-01.parquet (download from tags area - tag v1.0.0)
   
-  c)yellow_tripdata_2023-02.parquet
+  c)yellow_tripdata_2023-02.parquet (download from tags area - tag v1.0.0)
   
-  d)yellow_tripdata_2023-03.parquet
+  d)yellow_tripdata_2023-03.parquet (download from tags area - tag v1.0.0)
+  tag area link - https://github.com/Tomerperry14292/NYC_Yellow_Tripdata/releases/tag/v1.0.0
   
 9) Run the Airflow DAG name "yellow_taxi_trip_data" and feel free to look at the logs of the python opertor name "fetch_trip_data" and see the results.  
