@@ -31,6 +31,10 @@ def fetch_trip_data():
         #Remove records with null values in the datetime field
         mask = df["tpep_pickup_datetime"].notna()
         df = df[mask]
+        #Add year column to Dataframe
+        df['year'] = df['tpep_pickup_datetime'].apply(lambda x:x.year)
+        #Keep only trips from 2023
+        df = df[df['year'] == 2023]
         #Fill null passenger_count values with 0
         df["passenger_count"] = df["passenger_count"].fillna(0)
         df["passenger_count"] = df["passenger_count"].astype('int64')
