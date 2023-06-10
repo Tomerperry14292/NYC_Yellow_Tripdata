@@ -29,7 +29,7 @@ def fetch_trip_data():
         #Keep only the fields that relevant for calaculate the amount of passengers for each month  
         df = df[["tpep_pickup_datetime","passenger_count"]]
         #Remove records with null values in the datetime field
-        mask = df["tpep_pickup_datetime"].notna()
+        mask = df["tpep_pickup_datetime"].notnull()
         df = df[mask]
         #Add year column to Dataframe
         df['year'] = df['tpep_pickup_datetime'].apply(lambda x:x.year)
